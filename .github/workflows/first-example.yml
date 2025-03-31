@@ -9,11 +9,17 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v4
 
-      - name: welcome message
-        run: echo "My first GH Actions Job jk"
+      - name: List and Read file
+        run: |
+          echo "My first GH Actions Job jk"
+          ls -ltra
+          cat README.md
 
-      - name: list files
-        run: ls
+      - name: Generate ACII artwork
+        run: cowsay -f dragon "Run for cover, I am dragon... rawr" >> dagon.txt
 
-      - name: read file
-        run: cat README.md
+      #- name: list files
+      #  run: ls
+
+      #- name: read file
+      #  run: cat README.md
